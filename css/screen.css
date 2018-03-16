@@ -12,6 +12,11 @@ html {
     padding: 48px 24px 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -144,22 +149,29 @@ a:hover, a:focus {
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    html {
-        padding: 48px 48px 24px;
-    }
     h1 {
-        font-size: 58px;
-        line-height: 64px;
+        font-size: 46px;
+        line-height: 56px;
     }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    h1 {
+        font-size: 52px;
+        line-height: 64px;
+    }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {}
+
+h1 {
+    font-size: 58px;
+    line-height: 72px;
+}
 
 /*
     Print styles.
@@ -265,6 +277,16 @@ a:hover, a:focus {
 .c-author {
     display: flex;
     align-items: center;
+    margin-bottom: 48px;
+}
+
+.c-article__header {
+    padding: 24px 24px 0;
+}
+
+.c-article__body {
+    max-width: 1200px;
+    margin: 0 24px;
 }
 
 .c-author__image {
@@ -274,9 +296,35 @@ a:hover, a:focus {
 .c-author__image {
     width: 56px;
     height: 56px;
-    border-radius: 100%
+    border-radius: 100%;
+    margin-right: 16px;
 }
 
 .c-author__caption {
     padding-top: 0;
+}
+
+.c-author__name {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.c-author__meta {
+    font-size: 14px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 16px margin-top:4px;
+}
+
+.c-article_date {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
+/*
+utilities: max-width
+*/
+
+.u-max-width-sm {
+    max-width: 36em;
 }
